@@ -7,12 +7,12 @@ import (
     "strconv"
     "time"
 
-	// To use uptimerobot to ping
-	"net/http"
+    // To use uptimerobot to ping
+    "net/http"
 
-	"github.com/bwmarrin/discordgo"
-	"github.com/replit/database-go"
-	"github.com/joho/godotenv"
+    "github.com/bwmarrin/discordgo"
+    "github.com/replit/database-go"
+    "github.com/joho/godotenv"
 )
 
 type void struct {}
@@ -21,9 +21,9 @@ var bLset = map[string]void {}
 var size int
 
 func main() {
-	godotenv.Load()
+    godotenv.Load()
 
-	//set := map[string] void {} // New empty set
+    //set := map[string] void {} // New empty set
     //set["Foo"] = member // Add
     //for i := range set { // Loop
     //    fmt.Println(k)
@@ -54,15 +54,15 @@ func main() {
     bot.AddHandler(messageCreate)
 
     err = bot.Open()
-	if err != nil {
-		fmt.Println("Error opening Discord session: ", err)
-	}
+    if err != nil {
+        fmt.Println("Error opening Discord session: ", err)
+    }
     // Wait here until Ctrl-C or other term signal is received.
-	fmt.Println("Bot is now running. Press Ctrl-C to exit.")
-	for {}
+    fmt.Println("Bot is now running. Press Ctrl-C to exit.")
+    for {}
 
-	// Cleanly close down the Discord session.
-	bot.Close()
+    // Cleanly close down the Discord session.
+    bot.Close()
 }
 
 // Uses uptimerobot to ping
@@ -78,8 +78,8 @@ func web_server() {
 
 func ready(s *discordgo.Session, event *discordgo.Ready) {
     //t := UpdateStatusData{Status: "what my creator wills (in Go)"}
-	//UpdateStatusComplex(s, event)
-	s.UpdateGameStatus(0, "!ben")
+    //UpdateStatusComplex(s, event)
+    s.UpdateGameStatus(0, "!ben")
     fmt.Printf("Logged in as\n%s\n%s\n--------\n", s.State.User.Username, s.State.User.ID)
 }
 
