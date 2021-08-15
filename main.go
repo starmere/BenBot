@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+    "fmt"
     "os"
     "strings"
     "strconv"
@@ -103,7 +103,7 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
                 Fields: []*discordgo.MessageEmbedField{
                     &discordgo.MessageEmbedField {
                         Name:   ":link: Links",
-                        Value:  "**Source code**: https://github.com/starmere/BenBot/main.go\n**Official Discord server**: https://discord.gg/J3nJGhm2wh",
+                        Value:  "**Source code**: https://github.com/starmere/BenBot\n**Official Discord server**: https://discord.gg/J3nJGhm2wh",
                         Inline: false,
                     },
                 },
